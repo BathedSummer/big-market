@@ -33,7 +33,7 @@ public class CreditAdjustServiceTest {
         tradeEntity.setTradeName(TradeNameVO.REBATE);
         tradeEntity.setTradeType(TradeTypeVO.FORWARD);
         tradeEntity.setAmount(new BigDecimal("10.19"));
-        tradeEntity.setOutBusinessNo("10000990991");
+        tradeEntity.setOutBusinessNo("100009909911");
         creditAdjustService.createOrder(tradeEntity);
     }
 
