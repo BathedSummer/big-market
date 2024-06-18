@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag big-market-app:$(date +%s)
+      run: docker build . --file /blob/master/big-market-app/Dockerfile --tag big-market-app:$(date +%s)
