@@ -49,7 +49,7 @@ jobs:
         # 镜像推送时间
         push: ${{ github.event_name != 'pull_request' }}
         # 给清单打上多个标签
-        # tags: |
-          #fuzhengwei/big-market-app:${{ steps.date.outputs.today }}
-            #fuzhengwei/big-market-app:latest     
+        tags: |
+            fuzhengwei/big-market-app:v1.4
+            fuzhengwei/big-market-app:latest     
   
