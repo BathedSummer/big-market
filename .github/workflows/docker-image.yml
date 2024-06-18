@@ -50,6 +50,6 @@ jobs:
         push: ${{ github.event_name != 'pull_request' }}
         # 给清单打上多个标签
         tags: |
-          eryajf/go-ldap-admin-server:${{ steps.date.outputs.today }}
-            eryajf/go-ldap-admin-server:latest     
+          fuzhengwei/big-market-app:${{ steps.date.outputs.today }}
+            fuzhengwei/big-market-app:latest     
   
