@@ -43,8 +43,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        #file: ./big-market-app/Dockerfile
-        file: ./big-market-app/build.sh
+        file: ./big-market-app/Dockerfile
         # 所需要的体系结构，可以在 Available platforms 步骤中获取所有的可用架构 https://docs.docker.com/build/building/multi-platform/
         platforms: linux/amd64
         # 镜像推送时间
@@ -52,5 +51,12 @@ jobs:
         # 给清单打上多个标签
         tags: |
             fuzhengwei/big-market-app:1.4
-            fuzhengwei/big-market-app:latest     
-  
+            fuzhengwei/big-market-app:latest    
+            
+    - name: Aliyun Docker image
+      run: |
+        docker version
+        docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
+        # 推送镜像到镜像仓库
+        docker push fuzhengwei/big-market-app:1.4
+
