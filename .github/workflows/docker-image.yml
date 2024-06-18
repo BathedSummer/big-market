@@ -56,7 +56,7 @@ jobs:
     - name: Aliyun Docker image
       run: |
         docker version
-        docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
+        docker login --username=${{ secrets.ALIYUN_REGISTRY_USER }} --password=${{ secrets.ALIYUN_REGISTRY_PASSWORD }} registry.cn-hangzhou.aliyuncs.com
         # 推送镜像到镜像仓库
         docker push fuzhengwei/big-market-app:1.4
 
