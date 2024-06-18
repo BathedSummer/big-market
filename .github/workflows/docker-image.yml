@@ -58,5 +58,5 @@ jobs:
         docker version
         docker login --username=${{ secrets.ALIYUN_REGISTRY_USER }} --password=${{ secrets.ALIYUN_REGISTRY_PASSWORD }} registry.cn-hangzhou.aliyuncs.com
         # 推送镜像到镜像仓库
-        docker push $ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/big-market-app:1.4
+        docker push secrets.ALIYUN_REGISTRY/secrets.ALIYUN_NAME_SPACE/big-market-app:1.4
 
