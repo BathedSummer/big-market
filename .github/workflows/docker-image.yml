@@ -65,4 +65,3 @@ jobs:
       run: |
         docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-app:3.0
         docker push registry.cn-hangzhou.aliyuncs.com/fuzhengwei/big-market-app:latest
-
