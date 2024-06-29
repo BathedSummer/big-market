@@ -97,7 +97,7 @@
         <appender-ref ref="ERROR_FILE"/>
     </appender>
 
-    <appender name="CUSTOM" class="plus.gaga.monitor.sdk.appender.CustomAppender">
+    <appender name="Monitor" class="plus.gaga.monitor.sdk.appender.CustomAppender">
         <systemName>big-market</systemName>
         <groupId>cn.bugstack</groupId>
         <host>117.72.37.243</host>
@@ -110,8 +110,8 @@
     </springProfile>
 
     <root level="info">
-        <appender-ref ref="CUSTOM"/>
-
+        <!-- 监控 -->
+        <appender-ref ref="Monitor"/>
         <appender-ref ref="CONSOLE"/>
         <!-- 异步日志-INFO -->
         <appender-ref ref="ASYNC_FILE_INFO"/>
