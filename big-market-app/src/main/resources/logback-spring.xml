@@ -100,8 +100,8 @@
     <appender name="Monitor" class="plus.gaga.monitor.sdk.appender.CustomAppender">
         <systemName>big-market</systemName>
         <groupId>cn.bugstack</groupId>
-        <host>117.72.37.243</host>
-        <port>16379</port>
+        <host>redis</host>
+        <port>6379</port>
     </appender>
 
     <!-- 开发环境：控制台打印 -->
