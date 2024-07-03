@@ -1,4 +1,4 @@
-name: Build and Run OpenAiCodeReview By Main Maven Jar
+name: OpenAiCodeReview
 
 on:
   push:
