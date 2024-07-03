@@ -116,7 +116,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     /**
      * 转换计算，只根据小数位来计算。如【0.01返回100】、【0.009返回1000】、【0.0018返回10000】
      */
-    private double convert(double min) {
+    private double convertOld(double min) {
         if (0 == min) return 1D;
 
         double current = min;
@@ -126,6 +126,24 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
             max = max * 10;
         }
         return max;
+    }
+
+    private double convert(double min) {
+        if (min == 0) return 1D;
+
+        // Convert the number to a string to count the number of decimal places
+        String minStr = Double.toString(min);
+        int decimalPlaces = 0;
+
+        // Find the position of the decimal point
+        int decimalPointIndex = minStr.indexOf('.');
+        if (decimalPointIndex != -1) {
+            // Count the number of digits after the decimal point
+            decimalPlaces = minStr.length() - decimalPointIndex - 1;
+        }
+
+        // Return 10 raised to the power of the number of decimal places
+        return Math.pow(10, decimalPlaces);
     }
 
     /**
