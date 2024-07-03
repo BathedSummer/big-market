@@ -131,18 +131,14 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     private double convert(double min) {
         if (min == 0) return 1D;
 
-        // Convert the number to a string to count the number of decimal places
         String minStr = Double.toString(min);
         int decimalPlaces = 0;
 
-        // Find the position of the decimal point
         int decimalPointIndex = minStr.indexOf('.');
         if (decimalPointIndex != -1) {
-            // Count the number of digits after the decimal point
             decimalPlaces = minStr.length() - decimalPointIndex - 1;
         }
 
-        // Return 10 raised to the power of the number of decimal places
         return Math.pow(10, decimalPlaces);
     }
 
