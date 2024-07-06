@@ -23,7 +23,6 @@ public class ApiTest {
         log.info(JSON.toJSONString(requestDTO));
     }
 
-
     public static void main(String[] args) {
         double convert = convert(0.0018);
         System.out.println(convert);
@@ -38,5 +37,7 @@ public class ApiTest {
         }
         return max;
     }
+
+
 
 }
