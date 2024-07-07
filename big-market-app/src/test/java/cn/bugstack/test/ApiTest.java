@@ -17,7 +17,7 @@ public class ApiTest {
 
     @Test
     public void test_integer(){
-        System.out.println(Integer.parseInt("aaaa1000"));
+        System.out.println(Integer.parseInt("aaa"));
     }
 
     @Test
